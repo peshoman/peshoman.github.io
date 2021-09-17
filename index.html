@@ -1,0 +1,216 @@
+<title>Refining Cheatsheet</title>
+<style>
+body{margin:0 5px}
+table{width:2200px;text-align:center;border-collapse: separate;border-spacing: 0 4px;font-family:"Trebuchet MS", sans-serif;}
+table td{position:relative;font-weight:bold;font-size:28px;padding:15px 0 20px}
+table td:before,table td:after{position: absolute; top: 0; bottom: 0; right: 0; left: 0; border-left-width: 0; border-right-width: 0; border-top-width: 2px; border-bottom-width: 2px; border-style:solid; border-bottom-style:solid;border-color: #929292;}
+table td:last-child:after{content:none}
+table td.arr+td~td:before,table td.arr~td:after{top: 5px;bottom: 5px;border-color:#07c02f}
+table td.arr~.arr+td~td:before,table td.arr~.arr~td:after{top: 10px;bottom: 10px;border-color:#00cbe9}
+table td.arr~.arr~.arr+td~td:before,table td.arr~.arr~.arr~td:after{top: 15px;bottom: 15px;border-color:#ff16f7}
+table td:after{content:"";}
+table td:first-child, table .arr+td:not(:last-child){padding-left: 15px;}
+table td:first-child:after, table .arr+td:not(:last-child):after{border-left-width: 2px;border-radius: 20px 0 0 20px;}
+table td:last-child, table .arr+td{padding-right: 15px;}
+table td:last-child:before, table .arr+td:before{content:"";border-right-width: 2px;border-radius: 0 20px 20px 0;}
+table td.arr{padding:10px;text-shadow: 0 20px 0 black, 0 40px 0 black, 0 -20px 0 black, 0 -40px 0 black;font-size:32px;}
+table .ico{font-weight:normal;font-size:15px}
+table .ico i{display:block;width:80px;height:80px;margin:0 auto;background: url(oret1.png) no-repeat center / contain}
+table .ico.sandpaper i,table .ico.tannin i,table .ico.flux i,table .ico.crossweave i{width:60px;height:60px;margin:10px auto;}
+table .ico.charcoal i{width:50px;height:50px;margin:15px auto;background-image:url(charcoalt1.png)}
+table .ico.sandpaper i{background-image:url(sandpapert3.png)}
+table .ico.tannin i{background-image:url(tannint3.png)}
+table .ico.flux i{background-image:url(fluxt3.png)}
+table .ico.crossweave i{background-image:url(clothweavet3.png)}
+table .ico.stonet1 i{background-image:url(stonet1.png)}
+table .ico.stonet4 i{background-image:url(stonet4.png)}
+table .ico.lodestoneeartht1 i{background-image:url(lodestoneeartht1.png)}
+table .ico.blockt2 i{background-image:url(blockt2.png)}
+table .ico.blockt3 i{background-image:url(blockt3.png)}
+table .ico.blockt4 i{background-image:url(blockt4.png)}
+table .ico.blockt5 i{background-image:url(blockt5.png)}
+table .ico.woodt1 i{background-image:url(woodt1.png)}
+table .ico.woodt2 i{background-image:url(woodt2.png)}
+table .ico.woodt3 i{background-image:url(woodt3.png)}
+table .ico.woodt4 i{background-image:url(woodt4.png)}
+table .ico.woodt5 i{background-image:url(woodt5.png)}
+table .ico.timbert2 i{background-image:url(timbert2.png)}
+table .ico.timbert3 i{background-image:url(timbert3.png)}
+table .ico.timbert4 i{background-image:url(timbert4.png)}
+table .ico.timbert5 i{background-image:url(timbert5.png)}
+table .ico.rawhidet1 i{background-image:url(rawhidet1.png)}
+table .ico.rawhidet2 i{background-image:url(rawhidet2.png)}
+table .ico.rawhidet3 i{background-image:url(rawhidet3.png)}
+table .ico.rawhidet4 i{background-image:url(rawhidet4.png)}
+table .ico.rawhidet5 i{background-image:url(rawhidet5.png)}
+table .ico.leathert2 i{background-image:url(leathert2.png)}
+table .ico.leathert3 i{background-image:url(leathert3.png)}
+table .ico.leathert4 i{background-image:url(leathert4.png)}
+table .ico.leathert5 i{background-image:url(leathert5.png)}
+table .ico.fibert1 i{background-image:url(fibert1.png)}
+table .ico.fibert4 i{background-image:url(fibert4.png)}
+table .ico.fibert5 i{background-image:url(fibert5.png)}
+table .ico.clotht2 i{background-image:url(clotht2.png)}
+table .ico.clotht3 i{background-image:url(clotht3.png)}
+table .ico.clotht4 i{background-image:url(clotht4.png)}
+table .ico.clotht5 i{background-image:url(clotht5.png)}
+table .ico.ingott2 i{background-image:url(ingott2.png)}
+table .ico.ingott3 i{background-image:url(ingott3.png)}
+table .ico.ingott4 i{background-image:url(ingott4.png)}
+table .ico.ingott5 i{background-image:url(ingott5.png)}
+table .ico.oret4 i{background-image:url(oret4.png)}
+table .ico.oret5 i{background-image:url(oret5.png)}
+table .ico.silverore i{background-image:url(oreprecioust1.png)}
+table .ico.silverbar i{background-image:url(ingotprecioust1.png)}
+table .ico.goldore i{background-image:url(oreprecioust2.png)}
+table .ico.goldbar i{background-image:url(ingotprecioust2.png)}
+table .ico.platore i{background-image:url(oreprecioust3.png)}
+table .ico.platbar i{background-image:url(ingotprecioust3.png)}
+</style>
+
+<table>
+<tr>
+<td class="ico woodt1"><i></i>green wood</td>
+<td>x4</td>
+<td class="arr">&rarr;</td>
+<td class="ico timbert2"><i></i>timber</td>
+<td>x2 +</td>
+<td class="ico woodt2"><i></i>aged wood</td>
+<td>x4 +</td>
+<td class="ico sandpaper"><i></i>sandpaper</td>
+<td class="arr">&rarr;</td>
+<td class="ico timbert3"><i></i>lumber</td>
+<td>x2 +</td>
+<td class="ico woodt4"><i></i>wyrwood</td>
+<td>x6 +</td>
+<td class="ico sandpaper"><i></i>sandpaper</td>
+<td class="arr">&rarr;</td>
+<td class="ico timbert4"><i></i>wyrwood plank</td>
+<td>x2 +</td>
+<td class="ico woodt5"><i></i>ironwood</td>
+<td>x8 +</td>
+<td class="ico sandpaper"><i></i>sandpaper</td>
+<td class="arr">&rarr;</td>
+<td class="ico timbert5"><i></i>ironwood plank</td>
+</tr>
+<tr>
+<td class="ico stonet1"><i></i>stone</td>
+<td>x4</td>
+<td class="arr">&rarr;</td>
+<td class="ico blockt2"><i></i>stone block</td>
+<td>x4 +</td>
+<td class="ico sandpaper"><i></i>sandpaper</td>
+<td class="arr">&rarr;</td>
+<td class="ico blockt3"><i></i>stone brick</td>
+<td>x2 +</td>
+<td class="ico stonet4"><i></i>lodestone</td>
+<td>x6 +</td>
+<td class="ico sandpaper"><i></i>sandpaper</td>
+<td class="arr">&rarr;</td>
+<td class="ico blockt4"><i></i>lodestone brick</td>
+<td>x8 +</td>
+<td class="ico stonet4"><i></i>lodestone</td>
+<td>x2 +</td>
+<td class="ico lodestoneeartht1"><i></i>loamy lodestone</td>
+<td>+</td>
+<td class="ico sandpaper"><i></i>sandpaper</td>
+<td class="arr">&rarr;</td>
+<td class="ico blockt5"><i></i>obsidian voidstone</td>
+</tr>
+<tr>
+<td class="ico rawhidet1"><i></i>rawhide</td>
+<td>x4</td>
+<td class="arr">&rarr;</td>
+<td class="ico leathert2"><i></i>coarse leather</td>
+<td>x4 +</td>
+<td class="ico tannin"><i></i>tannin</td>
+<td class="arr">&rarr;</td>
+<td class="ico leathert3"><i></i>rugged leather</td>
+<td>x2 +</td>
+<td class="ico rawhidet4"><i></i>thick hide</td>
+<td>x6 +</td>
+<td class="ico tannin"><i></i>tannin</td>
+<td class="arr">&rarr;</td>
+<td class="ico leathert4"><i></i>layered leather</td>
+<td>x2 +</td>
+<td class="ico rawhidet5"><i></i>iron hide</td>
+<td>x8 +</td>
+<td class="ico tannin"><i></i>tannin</td>
+<td class="arr">&rarr;</td>
+<td class="ico leathert5"><i></i>infused leather</td>
+</tr>
+<tr>
+<td class="ico fibert1"><i></i>fibres</td>
+<td>x4</td>
+<td class="arr">&rarr;</td>
+<td class="ico clotht2"><i></i>linen</td>
+<td>x4 +</td>
+<td class="ico crossweave"><i></i>crossweave</td>
+<td class="arr">&rarr;</td>
+<td class="ico clotht3"><i></i>sateen</td>
+<td>x2 +</td>
+<td class="ico fibert4"><i></i>silk thread</td>
+<td>x6 +</td>
+<td class="ico crossweave"><i></i>crossweave</td>
+<td class="arr">&rarr;</td>
+<td class="ico clotht4"><i></i>silk</td>
+<td>x2 +</td>
+<td class="ico fibert5"><i></i>wirefiber</td>
+<td>x8 +</td>
+<td class="ico crossweave"><i></i>crossweave</td>
+<td class="arr">&rarr;</td>
+<td class="ico clotht5"><i></i>infused silk</td>
+</tr>
+<tr>
+<td class="ico silverore"><i></i>silver ore</td>
+<td>x4</td>
+<td class="arr">&rarr;</td>
+<td class="ico silverbar"><i></i>silver ingot</td>
+<td>x2 +</td>
+<td class="ico goldore"><i></i>gold ore</td>
+<td>x5</td>
+<td class="ico flux"><i></i>flux</td>
+<td class="arr">&rarr;</td>
+<td class="ico goldbar"><i></i>gold ingot</td>
+<td>x2 +</td>
+<td class="ico platore"><i></i>platinum ore</td>
+<td>x6 +</td>
+<td class="ico flux"><i></i>flux</td>
+<td class="arr">&rarr;</td>
+<td class="ico platbar"><i></i>platinum ingot</td>
+</tr>
+<tr>
+<td class="ico ironore"><i></i>iron ore</td>
+<td>x4</td>
+<td class="arr">&rarr;</td>
+<td class="ico ingott2"><i></i>iron ingot</td>
+<td>x3 +</td>
+<td class="ico charcoal"><i></i>charcoal</td>
+<td>x2 +</td>
+<td class="ico flux"><i></i>flux</td>
+<td class="arr">&rarr;</td>
+<td class="ico ingott3"><i></i>steel ingot</td>
+<td>x2 +</td>
+<td class="ico oret4"><i></i>starmetal ore</td>
+<td>x6 +</td>
+<td class="ico charcoal"><i></i>charcoal</td>
+<td>x2 +</td>
+<td class="ico flux"><i></i>flux</td>
+<td class="arr">&rarr;</td>
+<td class="ico ingott4"><i></i>starmetal ingot</td>
+<td>x2 +</td>
+<td class="ico oret5"><i></i>orichalcum ore</td>
+<td>x8 +</td>
+<td class="ico charcoal"><i></i>charcoal</td>
+<td>x2 +</td>
+<td class="ico flux"><i></i>flux</td>
+<td class="arr">&rarr;</td>
+<td class="ico ingott5"><i></i>orichalcum ingot</td>
+</tr>
+<tr>
+<td class="ico woodt1"><i></i>green wood</td>
+<td>x2</td>
+<td class="arr">&rarr;</td>
+<td class="ico charcoal"><i></i>charcoal</td>
+</tr>
+</table>
