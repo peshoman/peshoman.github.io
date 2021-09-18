@@ -66,8 +66,16 @@ table .ico.goldore i{background-image:url(oreprecioust2.png)}
 table .ico.goldbar i{background-image:url(ingotprecioust2.png)}
 table .ico.platore i{background-image:url(oreprecioust3.png)}
 table .ico.platbar i{background-image:url(ingotprecioust3.png)}
+#toggle{position: absolute;top: 0;left: 0;width:25px;padding: 8px;text-align:center; background: #333;z-index: 1;border-bottom-right-radius: 10px;cursor: pointer;}
+.darkmode #toggle{background: #888;}
+#toggle:before{content:"\1F319";}
+.darkmode #toggle:before{content:"\2600";color:#ffae30}
+.darkmode{background:#333;color:white;}
+.darkmode table .ico i{background-color: #ccc;box-shadow: 0 0 20px #333 inset, 0 0 5px #333 inset, 0 0 5px #333 inset, 0 0 5px #333 inset;border-radius: 10px;}
+.darkmode table .ico.charcoal i{box-shadow: none;border-radius: 50%;}
+.darkmode table td.arr{text-shadow: 0 20px 0 white, 0 40px 0 white, 0 -20px 0 white, 0 -40px 0 white;}
 </style>
-
+<div id="toggle"></div>
 <table>
 <tr>
 <td class="ico woodt1"><i></i>green wood</td>
@@ -214,3 +222,8 @@ table .ico.platbar i{background-image:url(ingotprecioust3.png)}
 <td class="ico charcoal"><i></i>charcoal</td>
 </tr>
 </table>
+<script>
+document.getElementById('toggle').addEventListener('click',function(){
+	document.body.classList.toggle('darkmode');
+});
+</script>
