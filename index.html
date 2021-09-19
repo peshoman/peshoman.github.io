@@ -25,8 +25,13 @@ table .ico{font-weight:normal;font-size:15px}
 table .ico i{display:block;width:80px;height:80px;margin:0 auto;background: url(oret1.png) no-repeat center / contain;font-size: 30px; color: #00c775; line-height: 130px; text-shadow: 0 0 15px white, 0 0 15px white, 0 0 15px white, 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 5px white, 0 0 5px white; transition:0.2s linear;}
 table .ico:hover i[n]{text-indent: -40px;}
 table .ico i[x]{color: red;}
+table .ico i.warn{position: relative;z-index: 1;}
+table .ico i.warn:not(:empty):before{content: "\26A0";position: absolute;top: 0;right: 0;z-index: 2;display: block;color: #ff6a00;font-size: 23px;line-height: 23px;font-style: normal;font-weight: bold;text-indent:0}
+table .ico i.warn:empty{pointer-events: none;}
 table .ico.sandpaper i,table .ico.tannin i,table .ico.flux i,table .ico.crossweave i{width:60px;height:60px;margin:10px auto;}
 table .ico.charcoal i{width:50px;height:50px;margin:15px auto;line-height: 100px;background-image:url(charcoalt1.png)}
+table .smelt .ico.charcoal i{text-indent:-9999px;}
+table .smelt .ico.charcoal i:before{top: -10px;right: -10px;}
 table .ico.sandpaper i{background-image:url(sandpapert3.png)}
 table .ico.tannin i{background-image:url(tannint3.png)}
 table .ico.flux i{background-image:url(fluxt3.png)}
@@ -137,13 +142,13 @@ table em b.mten:before{content:"-10";}
 <td class="arr">&rarr;</td>
 <td class="ico blockt4"><em><b class="pten"></b><b class="pone"></b><b class="mone"></b><b class="mten"></b></em><i n="8"></i>lodestone brick</td>
 <td>x8 +</td>
-<td class="ico stonet4"><i x="2"></i>lodestone</td>
+<td class="ico stonet4"><i x="2" class="warn" title="this is in addition to other lodestone on this chain"></i>lodestone</td>
 <td>x2 +</td>
 <td class="ico lodestoneeartht1"><i x="1"></i>loamy lodestone</td>
 <td>+</td>
 <td class="ico sandpaper"><i></i>sandpaper</td>
 <td class="arr">&rarr;</td>
-<td class="ico blockt5"><i n></i>obsidian voidstone</td>
+<td class="ico blockt5"><em><b class="pten"></b><b class="pone"></b><b class="mone"></b><b class="mten"></b></em><i n></i>obsidian voidstone</td>
 </tr>
 <tr>
 <td class="ico rawhidet1"><i x="4"></i>rawhide</td>
@@ -207,48 +212,47 @@ table em b.mten:before{content:"-10";}
 <td class="arr">&rarr;</td>
 <td class="ico platbar"><em><b class="pten"></b><b class="pone"></b><b class="mone"></b><b class="mten"></b></em><i n></i>platinum ingot</td>
 </tr>
-<tr>
+<tr class="smelt">
 <td class="ico ironore"><i x="4"></i>iron ore</td>
 <td>x4</td>
 <td class="arr">&rarr;</td>
 <td class="ico ingott2"><em><b class="pten"></b><b class="pone"></b><b class="mone"></b><b class="mten"></b></em><i n="3"></i>iron ingot</td>
 <td>x3 +</td>
-<td class="ico charcoal"><i></i>charcoal</td>
+<td class="ico charcoal"><i x="2" c class="warn" title="charcoal's total is on the below row"></i>charcoal</td>
 <td>x2 +</td>
 <td class="ico flux"><i></i>flux</td>
 <td class="arr">&rarr;</td>
-<td class="ico ingott3"><i n="2"></i>steel ingot</td>
+<td class="ico ingott3"><em><b class="pten"></b><b class="pone"></b><b class="mone"></b><b class="mten"></b></em><i n="2"></i>steel ingot</td>
 <td>x2 +</td>
 <td class="ico oret4"><i x="6"></i>starmetal ore</td>
 <td>x6 +</td>
-<td class="ico charcoal"><i></i>charcoal</td>
+<td class="ico charcoal"><i x="2" c class="warn" title="charcoal's total is on the below row"></i>charcoal</td>
 <td>x2 +</td>
 <td class="ico flux"><i></i>flux</td>
 <td class="arr">&rarr;</td>
-<td class="ico ingott4"><i n="2"></i>starmetal ingot</td>
+<td class="ico ingott4"><em><b class="pten"></b><b class="pone"></b><b class="mone"></b><b class="mten"></b></em><i n="2"></i>starmetal ingot</td>
 <td>x2 +</td>
 <td class="ico oret5"><i x="8"></i>orichalcum ore</td>
 <td>x8 +</td>
-<td class="ico charcoal"><i></i>charcoal</td>
+<td class="ico charcoal"><i x="2" c class="warn" title="charcoal's total is on the below row"></i>charcoal</td>
 <td>x2 +</td>
 <td class="ico flux"><i></i>flux</td>
 <td class="arr">&rarr;</td>
-<td class="ico ingott5"><i n></i>orichalcum ingot</td>
+<td class="ico ingott5"><em><b class="pten"></b><b class="pone"></b><b class="mone"></b><b class="mten"></b></em><i n></i>orichalcum ingot</td>
 </tr>
 <tr>
-<td class="ico woodt1"><i x="2"></i>green wood</td>
+<td class="ico woodt1"><i x="2" id="wood"></i>green wood</td>
 <td>x2</td>
 <td class="arr">&rarr;</td>
-<td class="ico noborderfix charcoal"><em><b class="pten"></b><b class="pone"></b><b class="mone"></b><b class="mten"></b></em><i n></i>charcoal</td>
+<td class="ico noborderfix charcoal"><em><b class="pten"></b><b class="pone"></b><b class="mone"></b><b class="mten"></b></em><i n id="charcoal"></i>charcoal</td>
 <td class="noborder"></td>
 <td class="noborder"></td>
 <td class="noborder"></td>
 <td class="noborder" colspan="12" style="padding:0;font-size:15px;font-weight:normal;text-align:left;">
 <div>&bull; you can hover and click on crafted mats and it will calculate the needed raw mats (numbers in red)</div>
 <div>&bull; it also calculates lower tier crafted mats (number in green) in case you already have them</div>
-<div>&bull; so far it doesn't calculate the refining mats (because they duplicate between recipes)</div>
+<div>&bull; doesn't calculate the refining mats, you should be carrying plenty of those anyway</div>
 <div>&bull; clicking higher tier recipe resets lower tiers you've clicked and recalculates (might change that logic)</div>
-<div>&bull; obsidian voidstone and the whole last smelting row are not ready yet (since they have duplicated mats in their recipes)</div>
 <div>&bull; dark mode in top left corner</div>
 <div>&bull; I'm open to usability suggestions</div>
 </td>
@@ -256,6 +260,8 @@ table em b.mten:before{content:"-10";}
 </table>
 <script>
 var doc = document;
+var wood = doc.getElementById('wood');
+var charcoal = doc.getElementById('charcoal');
 window.onload = setTimeout(function(){doc.body.setAttribute("class", doc.body.getAttribute('class') + " loaded");},1200);
 doc.getElementById('toggle').addEventListener('click',function(){
 	doc.body.classList.toggle('darkmode');
@@ -284,14 +290,15 @@ doc.querySelectorAll('b').forEach(btn => {
 		//calculate each material
 		var cont = 0; //helper for recipes with no raw mats
 		icos.forEach(ico => {
+			//clear whole chain if clicked goes to 0
 			if(num == ''){
 				ico.innerHTML = '';
 				return;
 			}
-			var x = ico.getAttribute('x');
-			var n = ico.getAttribute('n');
-			var temp = num;
-			//calculate needed raw mats
+			var x = ico.getAttribute('x'); //raw mat multiplier attr
+			var n = ico.getAttribute('n'); //refined mat multiplier attr
+			var temp = num; //num has wider scope, don't change it here
+			//calculate needed raw mats and charcoal edge case
 			if(x){
 				if(cont>0) ico.innerHTML = x*cont;
 				else ico.innerHTML = x*num;
@@ -309,6 +316,22 @@ doc.querySelectorAll('b').forEach(btn => {
 				ico.innerHTML = temp;
 			}
 		});
+		//calculate charcoal
+		if(e.target.parentNode.parentNode.parentNode.classList.contains('smelt')){
+			var charcoals = doc.querySelectorAll('.smelt .charcoal i');
+			var chartemp = 0;
+			charcoals.forEach(cc => {
+				chartemp += parseInt( ( cc.innerHTML == '' ) ? 0 : cc.innerHTML );
+			});
+			if(chartemp>0){
+				charcoal.innerHTML = chartemp;
+				wood.innerHTML = chartemp*2;
+			}
+			else{
+				charcoal.innerHTML = '';
+				wood.innerHTML = '';
+			}
+		}
     });
 });
 </script>
