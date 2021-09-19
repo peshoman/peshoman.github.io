@@ -6,18 +6,19 @@
 <meta property="og:url" content="https://peshoman.github.io/">
 <meta property="og:description" content="Easy and fast to use. Works also as refining recipe infographic. Stop coming back to town with 2 less green wood just because you suck at math!">
 <meta property="og:image" content="https://peshoman.github.io/cover.jpg">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <style>
 body{margin: 0; padding: 0 3px;}
-table{width:2200px;text-align:center;border-collapse: separate;border-spacing: 0 3px;font-family:"Trebuchet MS", sans-serif;}
-table td{position:relative;font-weight:bold;font-size:28px;padding:15px 0 20px}
+table{text-align:center;border-collapse: separate;border-spacing: 0 3px;font-family:"Trebuchet MS", sans-serif;}
+table td{position:relative;font-weight:bold;font-size:28px;padding:15px 0 20px 6px}
 table td:before,table td:after{position: absolute; top: 0; bottom: 0; right: 0; left: 0; border-left-width: 0; border-right-width: 0; border-top-width: 2px; border-bottom-width: 2px; border-style:solid; border-bottom-style:solid;border-color: #929292;}
 table td.arr+td~td:before,table td.arr~td:after{top: 5px;bottom: 5px;border-color:#07c02f}
 table td.arr~.arr+td~td:before,table td.arr~.arr~td:after{top: 10px;bottom: 10px;border-color:#00cbe9}
 table td.arr~.arr~.arr+td~td:before,table td.arr~.arr~.arr~td:after{top: 15px;bottom: 15px;border-color:#ff16f7}
 table td:after{content:"";}
-table td:first-child, table .arr+td:not(:last-child){padding-left: 15px;}
+table td:first-child, table .arr+td:not(:last-child){padding-left: 12px;}
 table td:first-child:after, table .arr+td:not(:last-child):after{border-left-width: 2px;border-radius: 20px 0 0 20px;}
-table td:last-child, table .arr+td{padding-right: 15px;}
+table td:last-child, table .arr+td{padding-right: 12px;}
 table td:last-child:before, table .arr+td:before{content:"";border-right-width: 2px;border-radius: 0 20px 20px 0;}
 table td:last-child:after,table td.noborderfix:after,table td.noborder:after,table td.noborder:before{content:none}
 table td.arr{padding:7px 8px 13px; text-shadow: 0 20px 0 black, 0 40px 0 black, 0 -20px 0 black, 0 -40px 0 black; font-size:32px;}
@@ -29,9 +30,12 @@ table .ico i.warn{position: relative;z-index: 1;}
 table .ico i.warn:not(:empty):before{content: "\26A0";position: absolute;top: 0;right: 0;z-index: 2;display: block;color: #ff6a00;font-size: 23px;line-height: 23px;font-style: normal;font-weight: bold;text-indent:0}
 table .ico i.warn:empty{pointer-events: none;}
 table .ico.sandpaper i,table .ico.tannin i,table .ico.flux i,table .ico.crossweave i{width:60px;height:60px;margin:10px auto;}
-table .ico.charcoal i{width:50px;height:50px;margin:15px auto;line-height: 100px;background-image:url(charcoalt1.png)}
-table .smelt .ico.charcoal i{text-indent:-9999px;}
+table .ico.charcoal i{background-image:url(charcoalt1.png);filter: brightness(1.5);}
+table .smelt .ico.charcoal i{text-indent:-9999px;width:50px;height:50px;margin:15px auto;line-height: 100px;}
+table .smelt .ico.charcoal.smaller i{width:35px;height:35px;margin:3px auto;}
 table .smelt .ico.charcoal i:before{top: -10px;right: -10px;}
+table .ico.charcoal .andflux{display:block;}
+table .ico.charcoal .andflux:before{content:"";display:block;width:50px;height:35px;margin:0 auto;background: url(fluxt3.png) no-repeat center / auto 47px;}
 table .ico.sandpaper i{background-image:url(sandpapert3.png)}
 table .ico.tannin i{background-image:url(tannint3.png)}
 table .ico.flux i{background-image:url(fluxt3.png)}
@@ -39,9 +43,9 @@ table .ico.crossweave i{background-image:url(clothweavet3.png)}
 table .ico.stonet1 i{background-image:url(stonet1.png)}
 table .ico.stonet4 i{background-image:url(stonet4.png)}
 table .ico.lodestoneeartht1 i{background-image:url(lodestoneeartht1.png)}
-table .ico.blockt2 i{background-image:url(blockt2.png)}
+table .ico.blockt2 i{background-image:url(blockt2.png);filter: brightness(1.3);}
 table .ico.blockt3 i{background-image:url(blockt3.png)}
-table .ico.blockt4 i{background-image:url(blockt4.png)}
+table .ico.blockt4 i{background-image:url(blockt4.png);filter: brightness(1.3);}
 table .ico.blockt5 i{background-image:url(blockt5.png)}
 table .ico.woodt1 i{background-image:url(woodt1.png)}
 table .ico.woodt2 i{background-image:url(woodt2.png)}
@@ -72,13 +76,14 @@ table .ico.ingott2 i{background-image:url(ingott2.png)}
 table .ico.ingott3 i{background-image:url(ingott3.png)}
 table .ico.ingott4 i{background-image:url(ingott4.png)}
 table .ico.ingott5 i{background-image:url(ingott5.png)}
+table .ico.ironore i{background-image:url(oret1.png);filter: brightness(1.3);}
 table .ico.oret4 i{background-image:url(oret4.png)}
 table .ico.oret5 i{background-image:url(oret5.png)}
 table .ico.silverore i{background-image:url(oreprecioust1.png)}
 table .ico.silverbar i{background-image:url(ingotprecioust1.png)}
 table .ico.goldore i{background-image:url(oreprecioust2.png)}
 table .ico.goldbar i{background-image:url(ingotprecioust2.png)}
-table .ico.platore i{background-image:url(oreprecioust3.png)}
+table .ico.platore i{background-image:url(oreprecioust3.png);filter: brightness(1.5);}
 table .ico.platbar i{background-image:url(ingotprecioust3.png)}
 table em{display: block;position: absolute;z-index:1;right: 2px;top: 0;bottom: 0;height: 96px;width: 70px;margin: auto; overflow:hidden; border-top-right-radius:20px; border-bottom-right-radius: 20px; }
 table em b{display: block; height:24px; text-align:right; padding-right:15px; margin-left:0; opacity:0.9; background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 100%);cursor:pointer;transition: margin-left 0.2s linear;}
@@ -218,7 +223,7 @@ table em b.mten:before{content:"-10";}
 <td class="arr">&rarr;</td>
 <td class="ico ingott2"><em><b class="pten"></b><b class="pone"></b><b class="mone"></b><b class="mten"></b></em><i n="3"></i>iron ingot</td>
 <td>x3 +</td>
-<td class="ico charcoal"><i x="2" c class="warn" title="charcoal's total is on the below row"></i>charcoal</td>
+<td class="ico charcoal"><i x="2" c class="warn" title="charcoal's total is on the row below"></i>charcoal</td>
 <td>x2 +</td>
 <td class="ico flux"><i></i>flux</td>
 <td class="arr">&rarr;</td>
@@ -226,22 +231,18 @@ table em b.mten:before{content:"-10";}
 <td>x2 +</td>
 <td class="ico oret4"><i x="6"></i>starmetal ore</td>
 <td>x6 +</td>
-<td class="ico charcoal"><i x="2" c class="warn" title="charcoal's total is on the below row"></i>charcoal</td>
-<td>x2 +</td>
-<td class="ico flux"><i></i>flux</td>
+<td class="ico charcoal smaller"><i x="2" c class="warn" title="charcoal's total is on the row below"></i>charcoal <strong>x2</strong> <span class="andflux">and flux</span></td>
 <td class="arr">&rarr;</td>
 <td class="ico ingott4"><em><b class="pten"></b><b class="pone"></b><b class="mone"></b><b class="mten"></b></em><i n="2"></i>starmetal ingot</td>
 <td>x2 +</td>
 <td class="ico oret5"><i x="8"></i>orichalcum ore</td>
 <td>x8 +</td>
-<td class="ico charcoal"><i x="2" c class="warn" title="charcoal's total is on the below row"></i>charcoal</td>
-<td>x2 +</td>
-<td class="ico flux"><i></i>flux</td>
+<td class="ico charcoal smaller"><i x="2" c class="warn" title="charcoal's total is on the row below"></i>charcoal <strong>x2</strong> <span class="andflux">and flux</span></td>
 <td class="arr">&rarr;</td>
 <td class="ico ingott5"><em><b class="pten"></b><b class="pone"></b><b class="mone"></b><b class="mten"></b></em><i n></i>orichalcum ingot</td>
 </tr>
 <tr>
-<td class="ico woodt1"><i x="2" id="wood"></i>green wood</td>
+<td class="ico woodt1"><i x="2" id="wood"></i>any wood</td>
 <td>x2</td>
 <td class="arr">&rarr;</td>
 <td class="ico noborderfix charcoal"><em><b class="pten"></b><b class="pone"></b><b class="mone"></b><b class="mten"></b></em><i n id="charcoal"></i>charcoal</td>
